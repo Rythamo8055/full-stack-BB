@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+        <h1 style="font: size 40px;"><b>EVENT REGISTRATION FORM</b></h1>
+        <label>Full name</label>
+        <input type="text" placeholder="Enter your full name" required><br>
+        <label>email</label>
+        <input type="email" placeholder="Enter your email" required><br>
+        <label>phone number</label>
+        <input type="phonenumber" placeholder="Enter your mobile number" required><br>
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required><br>
+        <label>Date of birth</label>
+        <input type="datetime-local" placeholder="Enter your birth date" required><br>
+   
+   
+   <h2>Event Details</h2>
+   <label>event catagory</label>
+   <select name="event_category">
+      <option value="" disabled selected>Select event category</option>
+      <option value="technical">Technical</option>
+      <option value="cultural">Cultural</option>
+      <option value="sports">Sports</option>
+      <option value="academic">Academic</option>
+   </select><br>
+   <input type="radio" name="live" id="online">online
+   <input type="radio" name="live" id="offine">offline<br>
+   <input type="checkbox" name="AI" id="AI" >AI<br>
+   <input type="checkbox" name="IT" id="IT">IT<br>
+   <input type="checkbox" name="CYBER" id="CYBER">CYBER<br>
+   <input type="checkbox" name="NETWORKING" id="NETWORKING">NETWORKING<br>
+   <input type="url" name="event_link" placeholder="Enter event link">
+   <input type="submit" name="submit" value="submit"><br>
+   <button type="submit">Submit</button>
+   
+   </ul>
+</body>
+</html>

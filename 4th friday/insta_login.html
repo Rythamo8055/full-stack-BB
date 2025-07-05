@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            margin: 0 0 10px;
+            padding: 10px 0;
+            width: 350px;
+            text-align: center;
+        }
+        .login-container h1 {
+            font-family: 'Billabong', cursive;
+            font-size: 52px;
+            color: #262626;
+            margin: 22px 0 12px;
+        }
+        .login-form input {
+            width: 80%;
+            padding: 9px 0 7px 8px;
+            margin-bottom: 6px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .login-form button {
+            width: 80%;
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .login-form button:disabled {
+            background-color: #b2dffc;
+            cursor: default;
+        }
+        .or-separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .or-separator::before, .or-separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        .or-separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+        .or-separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+        .or-separator span {
+            color: #8e8e8e;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .facebook-login {
+            color: #385185;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .forgot-password {
+            font-size: 12px;
+            color: #00376b;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+        .signup-container {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            margin: 10px 0;
+            padding: 20px 0;
+            width: 350px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .signup-container a {
+            color: #0095f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Instagram</h1>
+        <form class="login-form">
+            <input type="text" placeholder="Phone number, username, or email">
+            <input type="password" placeholder="Password">
+            <button type="submit">Log In</button>
+        </form>
+        <div class="or-separator"><span>OR</span></div>
+        <div class="facebook-login">
+            Log in with Facebook
+        </div>
+        <div class="forgot-password">
+            Forgot password?
+        </div>
+    </div>
+    <div class="signup-container">
+        Don't have an account? <a href="#">Sign up</a>
+    </div>
+</body>
+</html>
