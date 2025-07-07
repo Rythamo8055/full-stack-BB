@@ -1,0 +1,26 @@
+*{
+    background-color:aqua;
+}
+
+h1{
+    text-align: center;
+    color: blue;
+}
+p{
+ color: rgb(255, 191, 0);
+ text-align: center;   
+}
+#id-selector{
+    text-align: center;
+    color: rgb(0, 255, 60);
+}
+.external{
+    text-align:center;
+    color: blue;
+}
+h3,h4{
+    font-family:'Times New Roman';
+    text-align:center;
+    color:tomato;
+    font-size: 50px;
+}
