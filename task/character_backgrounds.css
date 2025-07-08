@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body {
+    
+    background-image: url('3 images/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.6;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+
+body::before {
+    content: '';
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(8px) brightness(0.6);
+    z-index: -1;
+}
+.character-sheet {
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 40px;
+    
+    /* The Frosted Glass Effect */
+    background-color: rgba(26, 26, 46, 0.6); 
+    backdrop-filter: blur(10px); /* This blurs what's *behind* the element */
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+
+
+.character-sheet header h1 {
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-size: 4em;
+    font-weight: 700;
+    color: #e94560;
+}
+
+
+
+.character-layout {
+    display: grid;
+   
+    grid-template-columns: 2fr 1.5fr;
+    gap: 40px;
+}
+
+
+
+.content-block {
+    padding: 0;
+}
+
+#image {
+    text-align: center;
+}
+
+#image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.luffy-bg {
+    background-image: url('3 images/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.content-block h2 {
+    color: #e94560;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content-block h3 {
+    color: #d0808d;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.content-block p {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: rgba(224, 224, 224, 0.9);
+    margin-bottom: 10px;
+}
+
+.content-block p:last-child {
+    margin-bottom: 0;
+}
