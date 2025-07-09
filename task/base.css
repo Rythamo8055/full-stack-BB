@@ -9,7 +9,6 @@ body {
     background-attachment: fixed;
 
 }
-
 header {
     background-color: transparent;
     color: #e94560;
@@ -20,13 +19,11 @@ header {
     backdrop-filter: none;
     border-radius: 15px;
 }
-
 header h1 {
     margin: 0;
     font-size: 4em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .bento-grid-luffy {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -37,31 +34,25 @@ header h1 {
     background-color: transparent;
     border-radius: 15px;
 }
-
 #name {
     grid-column: 1 / -1;
 }
-
 #powers {
     grid-column: 1 / 2;
 }
-
 #personality {
     grid-column: 1 / -1;
 }
-
 #image {
     grid-column: 2 / 3;
     text-align: center;
 }
-
 #image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin-top: 15px;
 }
-
 .bento-item-luffy {
     background-color: transparent;
     padding: 25px;
@@ -69,12 +60,10 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
 }
-
 .bento-item-luffy:hover {
     transform: translateY(-5px);
     box-shadow: none;
 }
-
 h2 {
     color: #e94560;
     font-size: 2.8em;
@@ -82,19 +71,16 @@ h2 {
     border-left: 5px solid #e94560;
     padding-left: 10px;
 }
-
 h3 {
     color: #d0808d;
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
 p {
     font-size: 1.3em;
     margin-bottom: 10px;
 }
-
 p:last-child {
     margin-bottom: 0;
 }
