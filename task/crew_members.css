@@ -36,7 +36,6 @@ body {
     grid-template-rows: 45vh 40vh 25vh 35vh 35vh;
     gap: 40px;
     padding: 20px 5vw; 
-
     width: 100%;
     box-sizing: border-box;
 }
