@@ -1,0 +1,9 @@
+ Memory Flip Card Game
+(Concentration Game) 10M
+Concept:
+-> Player flips two cards to find matching pairs. All cards are hidden at first.
+-> Complexity: Random shuffling, timer, moves counter, scoring logic.
+CSS Details:
+-> Card flipping with transform: rotateY(180deg)
+-> Hover effects, transitions
+-> Star rating based on performance (*responsive web*)

@@ -1,0 +1,234 @@
+/* --- Base and Fullscreen Setup --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+body {
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Main Game Container --- */
+.game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(1rem, 3vh, 2rem); /* Responsive padding */
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Fluid font size */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* --- Controls and Buttons --- */
+.difficulty-selection {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    margin: clamp(0.5rem, 2vh, 1rem) 0;
+}
+
+.difficulty-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: all 0.3s ease;
+}
+
+.difficulty-btn:hover, .difficulty-btn.active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: clamp(0.5rem, 2vh, 1rem);
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.stars {
+    color: gold;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.reset-button {
+    padding: 0.75rem 1.5rem;
+    background: rgba(231, 76, 60, 0.8);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: clamp(0.5rem, 2vh, 1rem) auto 0;
+}
+
+.reset-button:hover {
+    background: rgba(192, 57, 43, 0.9);
+    transform: translateY(-2px);
+}
+
+/* --- Game Board --- */
+.game-board {
+    display: grid;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    flex-grow: 1; /* Allows board to fill available space */
+    overflow-y: auto; /* Add scroll for very small screens */
+}
+
+.game-board.easy { grid-template-columns: repeat(4, 1fr); }
+.game-board.medium { grid-template-columns: repeat(4, 1fr); }
+.game-board.hard { grid-template-columns: repeat(5, 1fr); }
+
+/* --- Card Styling --- */
+.card {
+    aspect-ratio: 5 / 7;
+    perspective: 1000px;
+    background: transparent;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-front {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.card-back {
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.matched .card-inner {
+    transform: scale(0.95);
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    margin: 15% auto;
+    padding: clamp(1rem, 5vw, 2.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    animation: slide-in 0.5s ease-out forwards;
+}
+
+@keyframes slide-in {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px; right: 25px;
+    font-size: 28px; font-weight: bold;
+    cursor: pointer;
+}
+
+#playAgainBtn {
+    padding: 0.75rem 1.5rem;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+#playAgainBtn:hover { background: #27ae60; }
+#finalStars { color: gold; }
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) and (orientation: portrait) {
+    .game-board.hard { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .game-board.easy, .game-board.medium { grid-template-columns: repeat(3, 1fr); }
+    .game-board.hard { grid-template-columns: repeat(3, 1fr); }
+    .controls { flex-direction: column; gap: 10px; }
+}
