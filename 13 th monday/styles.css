@@ -1,0 +1,20 @@
+*{
+    justify-content: center;
+    background-color: rosybrown;
+    border: 0px;
+}
+
+.aqsa{
+    font-size: 100px;
+    text-align: center;
+}
+
+.button{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-color: aqua;
+    background-color: bisque;
+    width: 10%;
+    height: 0%;
+}
