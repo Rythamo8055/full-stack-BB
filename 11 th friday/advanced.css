@@ -62,5 +62,18 @@ background-color: palevioletred ;
     transform: rotate(360deg);
 }
 @media screen and (max-width:400px){
+    .block4{
+background-color: yellow;
+}
+.block5{
+background-color:black ;
+}
+.block6{
+background-color:burlywood ;
+}
+.block7{
+background-color: palevioletred ;
+}
     
 }
+
