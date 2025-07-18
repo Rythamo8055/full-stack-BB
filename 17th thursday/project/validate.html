@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="validate-form">
+            <h1>Acount Regestration</h1>
+            <form>
+                <!---username-->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="error-message" id="username-error">
+                    username must be contain only 3-20 characters contain only letters characters and underscrores
+                </div>
+                <div class="success-message" id="username-success">
+                    username is valid
+                </div>
+                <!---email-->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="error-message" id="email-error">
+                    Please enter a valid email address.
+                </div>
+                <div class="success-message" id="email-success">
+                    Email is valid.
+                </div>
+                <!---phone-->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="error-message" id="phone-error">
+                    Please enter a valid 10-digit phone number.
+                </div>
+                <div class="success-message" id="phone-success">
+                    Phone number is valid.
+                </div>
+                <!---password-->
+                <div class="password-requirements">
+                    <h3>Password Requirements:</h3>
+                    <ul>
+                        <li id="password-length">At least 8 characters</li>
+                        <li id="password-uppercase">One uppercase letter</li>
+                        <li id="password-lowercase">One lowercase letter</li>
+                        <li id="password-number">One number</li>
+                        <li id="password-special">One special character (!@#$%^&*)</li>
+                    </ul>
+                </div>
+                <!---password-->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password">
+                </div>
+                <div class="error-message" id="password-error">
+                    Password does not meet requirements.
+                </div>
+                <div class="success-message" id="password-success">
+                    Password is valid.
+                </div>
+                <!---confirm-password-->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password">
+                </div>
+                <div class="error-message" id="confirm-password-error">
+                    Passwords do not match.
+                </div>
+                <div class="success-message" id="confirm-password-success">
+                    Passwords match.
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="show-passwords">
+                    <label for="show-passwords">Show Passwords</label>
+                </div>
+                <button type="submit" class="create-account-btn">Create Account</button>
+            </form>
+            <p class="sign-in-text">Already have an account? <a href="#">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html>
