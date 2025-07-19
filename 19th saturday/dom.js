@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function(){
     const body=document.body;
 body.append("this is vishnu")
 const div1=document.createElement("div");
@@ -12,7 +12,12 @@ const div3=document.createElement("div");
 div3.textContent="this is div3";
 body.append(div3);
 
+const divAQSA=document.getElementById("AQSA");
 
 
-    
+console.log(divAQSA.textContent);
+console.log(divAQSA.innerHTML);
+console.log(divAQSA.innerText);
+
+
 });
