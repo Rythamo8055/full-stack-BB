@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const changeImageBtn = document.getElementById('changeImageBtn');
     const emojiDisplay = document.getElementById('emoji-display');
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
 
-    changeImageBtn.addEventListener('click', () => {
+    changeImageBtn.addEventListener('click', function() {
         currentIndex = (currentIndex + 1) % emojis.length;
         emojiDisplay.textContent = emojis[currentIndex];
     });
